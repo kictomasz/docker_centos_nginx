@@ -12,6 +12,5 @@ RUN yum -y update; yum -y httpd; yum clean all
 RUN httpd &
 
 EXPOSE 22
-EXPOSE 80
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
