@@ -2,8 +2,9 @@ FROM centos:latest
 MAINTAINER Tomasz Kic <kictomasz@gmail.com>
 
 # Add ssh server
+COPY etc/nginx.repo /etc/yum.repos.d/
 RUN yum -y update;
-RUN yum -y install openssh-server passwd epel-release supervisor; yum clean all
+RUN yum -y install openssh-server passwd epel-release supervisor nginx; yum clean all
 RUN mkdir /var/run/sshd
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 RUN ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N '' 

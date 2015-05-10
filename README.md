@@ -23,7 +23,7 @@ $ docker pull kictomasz/docker_centos_nginx
 If you'd like to build the image yourself then:
 
 ```bash
-$ git clone git@github.com:kictomasz/docker_centos_nginx
+$ git clone git@github.com:kictomasz/docker_centos_nginx.git
 $ cd centos_ssh
 $ sudo docker build -t="name" .
 ```
