@@ -1,1 +1,1 @@
-Centos with ssh
+Centos with ssh and EPEL REPO
