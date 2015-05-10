@@ -8,9 +8,6 @@ RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 RUN echo 'root:root' | chpasswd
 RUN sed -ri 's/#PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
 
-RUN yum -y update; yum -y httpd; yum clean all
-RUN httpd &
-
 EXPOSE 22
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
